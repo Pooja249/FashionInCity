@@ -1,0 +1,377 @@
+package org.apache.jsp.admin;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class calender_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html lang=\"en\">\n");
+      out.write("\n");
+      out.write("<head>\n");
+      out.write("\n");
+      out.write("  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("  <!-- Meta, title, CSS, favicons, etc. -->\n");
+      out.write("  <meta charset=\"utf-8\">\n");
+      out.write("  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
+      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("\n");
+      out.write("  <title>Admin Panel | </title>\n");
+      out.write("\n");
+      out.write("  <!-- Bootstrap core CSS -->\n");
+      out.write("\n");
+      out.write("  <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("\n");
+      out.write("  <link href=\"fonts/css/font-awesome.min.css\" rel=\"stylesheet\">\n");
+      out.write("  <link href=\"css/animate.min.css\" rel=\"stylesheet\">\n");
+      out.write("\n");
+      out.write("  <!-- Custom styling plus plugins -->\n");
+      out.write("  <link href=\"css/custom.css\" rel=\"stylesheet\">\n");
+      out.write("  <link href=\"css/icheck/flat/green.css\" rel=\"stylesheet\">\n");
+      out.write("\n");
+      out.write("  <link href=\"css/calendar/fullcalendar.css\" rel=\"stylesheet\">\n");
+      out.write("  <link href=\"css/calendar/fullcalendar.print.css\" rel=\"stylesheet\" media=\"print\">\n");
+      out.write("\n");
+      out.write("  <script src=\"js/jquery.min.js\"></script>\n");
+      out.write("</head>\n");
+
+    if(session.getAttribute("email")==null)
+    {
+        response.sendRedirect("index.jsp");
+    }
+    else
+    {
+
+      out.write("\n");
+      out.write("\n");
+      out.write("<body class=\"nav-md\">\n");
+      out.write("\n");
+      out.write("\t<div class=\"container body\">\n");
+      out.write("\t\t<div class=\"main_container\">\n");
+      out.write("\t\t\t<div class=\"col-md-3 left_col\">\n");
+      out.write("\t\t\t\t<div class=\"left_col scroll-view\">\n");
+      out.write("                                      ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "include/header.jsp", out, false);
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t<!-- sidebar menu -->\n");
+      out.write("\t\t\t\t\t ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "include/sidebar.jsp", out, false);
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<!-- /sidebar menu -->\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<!-- /menu footer buttons -->\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t\t<!-- /menu footer buttons -->\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\n");
+      out.write("\t\t\t<!-- top navigation -->\n");
+      out.write("\t\t\t ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "include/nav.jsp", out, false);
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t<!-- /top navigation -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t<!-- page content -->\n");
+      out.write("\t\t\t<div class=\"right_col\" role=\"main\">\n");
+      out.write("\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<div class=\"col-md-12 col-sm-12 col-xs-12\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"dashboard_graph\">\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t\t<div class=\"row x_title\">\n");
+      out.write("\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n");
+      out.write("                                                                    <h3>Calander <small><a href=\"dashboard.jsp\"><button class=\"btn-lg btn btn-outline btn-success\"> Go Back</button></a></small></h3>\n");
+      out.write("\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t</div>\n");
+      out.write("             <div class=\"x_panel\">\n");
+      out.write("                <div class=\"x_title\">\n");
+      out.write("                  <h2> Calander Events</h2>\n");
+      out.write("                  <ul class=\"nav navbar-right panel_toolbox\">\n");
+      out.write("                    <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("                  <div class=\"clearfix\"></div>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"x_content\">\n");
+      out.write("                  <br />\n");
+      out.write("                <div class=\"x_content\">\n");
+      out.write("\n");
+      out.write("                  <div id='calendar'></div>\n");
+      out.write("\n");
+      out.write("                </div>\n");
+      out.write("              </div>\n");
+      out.write("            </div>\n");
+      out.write("                                                </div>  </div>\n");
+      out.write("                                        </div>\n");
+      out.write("        <!-- footer content -->\n");
+      out.write("                         </div>\n");
+      out.write("      ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "include/footer.jsp", out, false);
+      out.write("\n");
+      out.write("                              \n");
+      out.write("                </div></div> \n");
+      out.write("      <!-- Start Calender modal -->\n");
+      out.write("      <div id=\"CalenderModalNew\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n");
+      out.write("        <div class=\"modal-dialog\">\n");
+      out.write("          <div class=\"modal-content\">\n");
+      out.write("\n");
+      out.write("            <div class=\"modal-header\">\n");
+      out.write("              <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\n");
+      out.write("              <h4 class=\"modal-title\" id=\"myModalLabel\">New Calender Entry</h4>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"modal-body\">\n");
+      out.write("              <div id=\"testmodal\" style=\"padding: 5px 20px;\">\n");
+      out.write("                <form id=\"antoform\" class=\"form-horizontal calender\" role=\"form\">\n");
+      out.write("                  <div class=\"form-group\">\n");
+      out.write("                    <label class=\"col-sm-3 control-label\">Title</label>\n");
+      out.write("                    <div class=\"col-sm-9\">\n");
+      out.write("                      <input type=\"text\" class=\"form-control\" id=\"title\" name=\"title\">\n");
+      out.write("                    </div>\n");
+      out.write("                  </div>\n");
+      out.write("                  <div class=\"form-group\">\n");
+      out.write("                    <label class=\"col-sm-3 control-label\">Description</label>\n");
+      out.write("                    <div class=\"col-sm-9\">\n");
+      out.write("                      <textarea class=\"form-control\" style=\"height:55px;\" id=\"descr\" name=\"descr\"></textarea>\n");
+      out.write("                    </div>\n");
+      out.write("                  </div>\n");
+      out.write("                </form>\n");
+      out.write("              </div>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"modal-footer\">\n");
+      out.write("              <button type=\"button\" class=\"btn btn-default antoclose\" data-dismiss=\"modal\">Close</button>\n");
+      out.write("              <button type=\"button\" class=\"btn btn-primary antosubmit\">Save changes</button>\n");
+      out.write("            </div>\n");
+      out.write("          </div>\n");
+      out.write("        </div>\n");
+      out.write("      </div>\n");
+      out.write("      <div id=\"CalenderModalEdit\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n");
+      out.write("        <div class=\"modal-dialog\">\n");
+      out.write("          <div class=\"modal-content\">\n");
+      out.write("\n");
+      out.write("            <div class=\"modal-header\">\n");
+      out.write("              <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\n");
+      out.write("              <h4 class=\"modal-title\" id=\"myModalLabel2\">Edit Calender Entry</h4>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"modal-body\">\n");
+      out.write("\n");
+      out.write("              <div id=\"testmodal2\" style=\"padding: 5px 20px;\">\n");
+      out.write("                <form id=\"antoform2\" class=\"form-horizontal calender\" role=\"form\">\n");
+      out.write("                  <div class=\"form-group\">\n");
+      out.write("                    <label class=\"col-sm-3 control-label\">Title</label>\n");
+      out.write("                    <div class=\"col-sm-9\">\n");
+      out.write("                      <input type=\"text\" class=\"form-control\" id=\"title2\" name=\"title2\">\n");
+      out.write("                    </div>\n");
+      out.write("                  </div>\n");
+      out.write("                  <div class=\"form-group\">\n");
+      out.write("                    <label class=\"col-sm-3 control-label\">Description</label>\n");
+      out.write("                    <div class=\"col-sm-9\">\n");
+      out.write("                      <textarea class=\"form-control\" style=\"height:55px;\" id=\"descr2\" name=\"descr\"></textarea>\n");
+      out.write("                    </div>\n");
+      out.write("                  </div>\n");
+      out.write("\n");
+      out.write("                </form>\n");
+      out.write("              </div>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"modal-footer\">\n");
+      out.write("              <button type=\"button\" class=\"btn btn-default antoclose2\" data-dismiss=\"modal\">Close</button>\n");
+      out.write("              <button type=\"button\" class=\"btn btn-primary antosubmit2\">Save changes</button>\n");
+      out.write("            </div>\n");
+      out.write("          </div>\n");
+      out.write("        </div>\n");
+      out.write("      </div>\n");
+      out.write("\n");
+      out.write("      <div id=\"fc_create\" data-toggle=\"modal\" data-target=\"#CalenderModalNew\"></div>\n");
+      out.write("      <div id=\"fc_edit\" data-toggle=\"modal\" data-target=\"#CalenderModalEdit\"></div>\n");
+      out.write("\n");
+      out.write("      <!-- End Calender modal -->\n");
+      out.write("      <!-- /page content -->\n");
+      out.write("    </div>\n");
+      out.write("\n");
+      out.write("  </div>\n");
+      out.write("\n");
+      out.write("  <div id=\"custom_notifications\" class=\"custom-notifications dsp_none\">\n");
+      out.write("    <ul class=\"list-unstyled notifications clearfix\" data-tabbed_notifications=\"notif-group\">\n");
+      out.write("    </ul>\n");
+      out.write("    <div class=\"clearfix\"></div>\n");
+      out.write("    <div id=\"notif-group\" class=\"tabbed_notifications\"></div>\n");
+      out.write("  </div>\n");
+      out.write("\n");
+      out.write("  <script src=\"js/bootstrap.min.js\"></script>\n");
+      out.write("\n");
+      out.write("  <script src=\"js/nprogress.js\"></script>\n");
+      out.write("  \n");
+      out.write("  <!-- bootstrap progress js -->\n");
+      out.write("  <script src=\"js/progressbar/bootstrap-progressbar.min.js\"></script>\n");
+      out.write("  <script src=\"js/nicescroll/jquery.nicescroll.min.js\"></script>\n");
+      out.write("  <!-- icheck -->\n");
+      out.write("  <script src=\"js/icheck/icheck.min.js\"></script>\n");
+      out.write("\n");
+      out.write("  <script src=\"js/custom.js\"></script>\n");
+      out.write("\n");
+      out.write("  <script src=\"js/moment/moment.min.js\"></script>\n");
+      out.write("  <script src=\"js/calendar/fullcalendar.min.js\"></script>\n");
+      out.write("  <!-- pace -->\n");
+      out.write("  <script src=\"js/pace/pace.min.js\"></script>\n");
+      out.write("  <script>\n");
+      out.write("    $(window).load(function() {\n");
+      out.write("\n");
+      out.write("      var date = new Date();\n");
+      out.write("      var d = date.getDate();\n");
+      out.write("      var m = date.getMonth();\n");
+      out.write("      var y = date.getFullYear();\n");
+      out.write("      var started;\n");
+      out.write("      var categoryClass;\n");
+      out.write("\n");
+      out.write("      var calendar = $('#calendar').fullCalendar({\n");
+      out.write("        header: {\n");
+      out.write("          left: 'prev,next today',\n");
+      out.write("          center: 'title',\n");
+      out.write("          right: 'month,agendaWeek,agendaDay'\n");
+      out.write("        },\n");
+      out.write("        selectable: true,\n");
+      out.write("        selectHelper: true,\n");
+      out.write("        select: function(start, end, allDay) {\n");
+      out.write("          $('#fc_create').click();\n");
+      out.write("\n");
+      out.write("          started = start;\n");
+      out.write("          ended = end\n");
+      out.write("\n");
+      out.write("          $(\".antosubmit\").on(\"click\", function() {\n");
+      out.write("            var title = $(\"#title\").val();\n");
+      out.write("            if (end) {\n");
+      out.write("              ended = end\n");
+      out.write("            }\n");
+      out.write("            categoryClass = $(\"#event_type\").val();\n");
+      out.write("\n");
+      out.write("            if (title) {\n");
+      out.write("              calendar.fullCalendar('renderEvent', {\n");
+      out.write("                  title: title,\n");
+      out.write("                  start: started,\n");
+      out.write("                  end: end,\n");
+      out.write("                  allDay: allDay\n");
+      out.write("                },\n");
+      out.write("                true // make the event \"stick\"\n");
+      out.write("              );\n");
+      out.write("            }\n");
+      out.write("            $('#title').val('');\n");
+      out.write("            calendar.fullCalendar('unselect');\n");
+      out.write("\n");
+      out.write("            $('.antoclose').click();\n");
+      out.write("\n");
+      out.write("            return false;\n");
+      out.write("          });\n");
+      out.write("        },\n");
+      out.write("        eventClick: function(calEvent, jsEvent, view) {\n");
+      out.write("          //alert(calEvent.title, jsEvent, view);\n");
+      out.write("\n");
+      out.write("          $('#fc_edit').click();\n");
+      out.write("          $('#title2').val(calEvent.title);\n");
+      out.write("          categoryClass = $(\"#event_type\").val();\n");
+      out.write("\n");
+      out.write("          $(\".antosubmit2\").on(\"click\", function() {\n");
+      out.write("            calEvent.title = $(\"#title2\").val();\n");
+      out.write("\n");
+      out.write("            calendar.fullCalendar('updateEvent', calEvent);\n");
+      out.write("            $('.antoclose2').click();\n");
+      out.write("          });\n");
+      out.write("          calendar.fullCalendar('unselect');\n");
+      out.write("        },\n");
+      out.write("        editable: true,\n");
+      out.write("        events: [{\n");
+      out.write("          title: 'All Day Event',\n");
+      out.write("          start: new Date(y, m, 1)\n");
+      out.write("        }, {\n");
+      out.write("          title: 'Long Event',\n");
+      out.write("          start: new Date(y, m, d - 5),\n");
+      out.write("          end: new Date(y, m, d - 2)\n");
+      out.write("        }, {\n");
+      out.write("          title: 'Meeting',\n");
+      out.write("          start: new Date(y, m, d, 10, 30),\n");
+      out.write("          allDay: false\n");
+      out.write("        }, {\n");
+      out.write("          title: 'Lunch',\n");
+      out.write("          start: new Date(y, m, d + 14, 12, 0),\n");
+      out.write("          end: new Date(y, m, d, 14, 0),\n");
+      out.write("          allDay: false\n");
+      out.write("        }, {\n");
+      out.write("          title: 'Birthday Party',\n");
+      out.write("          start: new Date(y, m, d + 1, 19, 0),\n");
+      out.write("          end: new Date(y, m, d + 1, 22, 30),\n");
+      out.write("          allDay: false\n");
+      out.write("        }, {\n");
+      out.write("          title: 'Click for Google',\n");
+      out.write("          start: new Date(y, m, 28),\n");
+      out.write("          end: new Date(y, m, 29),\n");
+      out.write("          url: 'http://google.com/'\n");
+      out.write("        }]\n");
+      out.write("      });\n");
+      out.write("    });\n");
+      out.write("  </script>\n");
+      out.write("</body>\n");
+
+    }
+
+      out.write("\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

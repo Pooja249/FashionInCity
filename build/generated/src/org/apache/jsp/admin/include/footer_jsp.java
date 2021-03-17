@@ -1,0 +1,89 @@
+package org.apache.jsp.admin.include;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>JSP Page</title>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("    <footer>\n");
+      out.write("\t\t\t\t\t<div class=\"copyright-info\">\n");
+      out.write("\t\t\t\t\t\t<p class=\"pull-right\">E-commerce Admin Panel Edited By <a href=\"https://www.instagram.com/maninder__duhan/\">Maninder Duhan</a>\t\t\n");
+      out.write("\t\t\t\t\t\t</p>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t<div class=\"clearfix\"></div>\n");
+      out.write("\t\t\t\t</footer>    \n");
+      out.write("        \t<div class=\"sidebar-footer hidden-small\">\n");
+      out.write("\t\t\t\t\t\t<a href=\"edit_profile.jsp\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Settings\">\n");
+      out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-cog\" aria-hidden=\"true\"></span>\n");
+      out.write("\t\t\t\t\t\t</a>\n");
+      out.write("\t\t\t\t\t\t<a data-toggle=\"tooltip\" data-placement=\"top\" title=\"Contact_Developer\">\n");
+      out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-question-sign\" aria-hidden=\"true\"></span>\n");
+      out.write("\t\t\t\t\t\t</a>\n");
+      out.write("\t\t\t\t\t\t<a href=\"calender.jsp\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Calender\">\n");
+      out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-eye-close\" aria-hidden=\"true\"></span>\n");
+      out.write("\t\t\t\t\t\t</a>\n");
+      out.write("                         <a href=\"index.jsp\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Logout\">\n");
+      out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-off\" aria-hidden=\"true\"></span>\n");
+      out.write("\t\t\t\t\t\t</a>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
